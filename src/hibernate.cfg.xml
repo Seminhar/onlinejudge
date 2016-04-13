@@ -16,7 +16,6 @@
         <property name="hibernate.connection.password"></property>
 
         <property name="hbm2ddl.auto">update</property>
-
         <property name="hibernate.current_session_context_class">thread</property>
 
         <property name="hibernate.connection.pool.size">20</property>
