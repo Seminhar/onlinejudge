@@ -40,4 +40,24 @@ public class problemInfoAction extends SuperAction implements ModelDriven<proble
         return "problemInfo_queryAll_failure";
         return "problemInfo_queryAll_success";
     }
+    public String queryAllproblemList(){
+       problemInfoDao problemInfoDao = new problemInfoDaoImpl();
+        List<problemInfo> list = problemInfoDao.queryAllProblemInfo();
+        if(list!=null&&list.size()>0) {
+            session.setAttribute("problemInfo_queryAllList_success",list);
+        }
+        else
+        return "problemInfo-queryAllList_failure";
+        return "problemInfo-queryAllList_success";
+    }
+    public String problemShow(){
+        problemInfoDao problemInfoDao = new problemInfoDaoImpl();
+        List<problemInfo> list = problemInfoDao.showProblemInfo();
+        if(list!=null&&list.size()>0) {
+            session.setAttribute("showProblemInfo_success",list);
+        }
+        else
+        return "showProblemInfo_failure";
+        return "showProblemInfo_success";
+    }
 }

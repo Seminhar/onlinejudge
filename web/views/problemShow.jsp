@@ -5,7 +5,7 @@
   Time: 1:01
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8" %>
+<%@ page language="java" import="org.apache.struts2.ServletActionContext" contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
     String path = request.getContextPath();
@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <title>
+        <s:property value="${sessionScope.problemInfo.problenName}"></s:property>
         GZS送温暖
     </title>
     <link rel="stylesheet" type="text/css" href="../css/problem/problemShow.css">
@@ -27,7 +28,7 @@
 
 <body>
 <div class="container main">
-    <h2 class="text-center">GZS送温暖</h2>
+    <h2 class="text-center"> <s:property value="${sessionScope.problemInfo.problenName}"></s:property></h2>
 
     <p class="text-muted text-center">
         发布时间: 2015年9月6日 15:18&nbsp;&nbsp; 时间限制: 1000ms&nbsp;&nbsp; 内存限制: 256M

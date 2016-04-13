@@ -21,27 +21,21 @@
         <tr>
             <th>题号</th>
             <th>题目</th>
-            <th>发布时间</th>
-            <th>作者</th>
-            <th>备注</th>
-            <th>操作</th>
+            <th>提交</th>
+            <th>通过</th>
+            <th>正确率</th>
         </tr>
-        <s:iterator value="#session.problemInfo_queryAll_success" var="pInfo">
+        <s:iterator value="#session.problemInfo_queryAllList_success" var="pInfo">
             <tr>
                 <td style="width:265px;">
                     <div class="cut_title ellipsis">
                         <s:property value="#pInfo.problemId"/>
                     </div>
                 </td>
-                <td><s:property value="#pInfo.problemName"/></td>
-                <td><s:property value="#pInfo.AcceptTimes"/></td>
-                <td><s:property value="#pInfo.author"/></td>
-                <td><s:property value=""/></td>
-                <td>
-                    <a href="<%=path%>/problemInfo//problemInfo_delete.action?sid=<s:property value="#pInfo.problemId"/>"
-                       onclick="javascript: return confirm('真的要删除吗？');">删除
-                    </a>
-                </td>
+                <td><a href=<%=path%>/problemInfo/problemInfo_queryAllproblemList.action><s:property value="#pInfo.problemName"/></a></td>
+                <td><s:property value="#"/></td>
+                <td><s:property value="#"/></td>
+                <td><s:property value="#"/></td>
             </tr>
         </s:iterator>
     </table>

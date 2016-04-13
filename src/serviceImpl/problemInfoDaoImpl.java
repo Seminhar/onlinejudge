@@ -87,7 +87,31 @@ public class problemInfoDaoImpl implements problemInfoDao {
         try {
             Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
-            hql = "from problemInfo ";
+            hql="select new problemInfo (problemId,problemName,AcceptTimes,author) from problemInfo ";
+            /*hql = "from problemInfo ";*/
+            Query query = session.createQuery(hql);
+            list = query.list();
+            tx.commit();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+            tx.commit();
+            return list;
+        } finally {
+            if (tx != null)
+                tx = null;
+        }
+    }
+
+    @Override
+    public List<problemInfo> showProblemInfo() {
+        Transaction tx = null;
+        String hql = "";
+        List<problemInfo> list = null;
+        try {
+            Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+            tx = session.beginTransaction();
+            hql = "from problemInfo where problemId=? ";
             Query query = session.createQuery(hql);
             list = query.list();
             tx.commit();

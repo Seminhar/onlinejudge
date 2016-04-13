@@ -14,56 +14,7 @@
 <!DOCTYPE html>
 <html>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-<style type="text/css">
-    table {
-        border-collapse: collapse;
-        border-spacing: 0
-    }
-    .table {
-        width: 100%;
-    }
-
-    .table th {
-        border: 1px #d2d2d2 solid;
-        height: 40px;
-        line-height: 40px;
-    }
-
-    .table td {
-        border: 1px #d2d2d2 solid;
-        padding: 10px 8px;
-    }
-
-    .table tr:nth-child(odd) {
-        background: #f8f8f8;
-    }
-
-    .table tr:hover {
-        background: #f9f9f9;
-    }
-
-    .table td a {
-        color: #19a97b;
-        margin: 0 5px;
-        cursor: pointer;
-    }
-
-    .table td .inner_btn {
-        background: #F9F;
-        color: white;
-        padding: 5px 8px;
-        border-radius: 2px;
-    }
-
-    .table td .inner_btn:hover {
-        background: #ffa4ff;
-        color: #f8f8f8;
-    }
-
-    .table td .cut_title {
-        width: 265px;
-    }
-</style>
+<link  rel="stylesheet" href="../../css/backStage/table.css">
 <body>
 <div id="mainContainer">
     <table class="table">

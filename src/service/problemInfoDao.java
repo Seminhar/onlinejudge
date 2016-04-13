@@ -20,5 +20,8 @@ public interface problemInfoDao {
     /**
      * 查询题目*/
     public List<problemInfo> queryAllProblemInfo();
-
+    /**
+     * 显示题目信息
+     */
+    public List<problemInfo> showProblemInfo();
 }

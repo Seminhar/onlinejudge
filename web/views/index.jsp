@@ -33,6 +33,7 @@
         }
     </style>
 </head>
+
 <body>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
@@ -75,8 +76,12 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello, world!</h1>
-        <p></p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <span>
+            <h2><em>i++和++i的世界</em></h2>
+            <h2><em>跌宕着无穷与循环</em></h2>
+            <h2><em>在递归中走出世界的尽头！</em></h2>
+        </span>
+       <%-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>--%>
     </div>
 </div>
 
@@ -89,29 +94,26 @@
                 condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
                 euismod. Donec sed odio dui.
             </p>
-            <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+            <%--<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
         <div class="col-md-4">
-            <h2>题目栅栏</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+            <h2><a href=<%=path%>/problemInfo/problemInfo_queryAllproblemList.action>题目栅栏</a></h2>
+           <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
         <div class="col-md-4">
             <h2>在线编译</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
                 porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
                 fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+           <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
     </div>
-    <hr>
-    <footer>
-        <p>&copy; Seminhar 2016</p>
-    </footer>
 </div>
 <!-- /container -->
+<hr>
+<div class="footer" id="footer">
+    <p>&copy; Seminhar 2016</p>
+</div>
 <script src="../js/plugins.js"></script>
 <script src="../js/main.js"></script>
 </body>
