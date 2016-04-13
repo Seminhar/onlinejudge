@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <title>添加题目</title>
-    <link rel="stylesheet" href="css/backStage/addProblem.css" />
+    <link rel="stylesheet" href="../../css/backStage/addProblem.css" />
 </head>
 <body>
 <div class="problem_container">

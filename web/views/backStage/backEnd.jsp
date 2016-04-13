@@ -17,9 +17,9 @@
 <head>
     <title>系统后端管理</title>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" href="css/dtree.css"/>
+    <link rel="stylesheet" href="../../css/dtree.css"/>
     <script type="text/javascript">var dtreeIconBasePath = "img/dtree";</script>
-    <script type="text/javascript"  src="js/dtree.js"></script>
+    <script type="text/javascript"  src="../../js/dtree.js"></script>
 </head>
 <body>
 <script type="text/javascript">

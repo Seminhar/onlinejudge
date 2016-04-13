@@ -10,9 +10,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>后台管理系统</title>
-		<link type="text/css" rel="stylesheet" href="css/backStage/backAdmin.css" />
-		<script type="text/javascript" src="js/backStage/jquery-1.8.3.min.js"></script>
-		<script type="text/javascript" src="js/backStage/menu.js"></script>
+		<link type="text/css" rel="stylesheet" href="../../css/backStage/backAdmin.css" />
+		<script type="text/javascript" src="../../js/backStage/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../../js/backStage/menu.js"></script>
 	</head>
 
 	<body>
@@ -54,10 +54,10 @@
 						</div>
 					</li>
 					<li>
-						<h4 class="M4"><span></span>试题管理</h4>
+						<h4 class="M4"><span></span>题目管理</h4>
 						<div class="list-item none">
-							<a href=''>试题列表</a>
-							<a href="addProblem.jsp">添加试题</a>
+							<a href=<%=path%>/problemInfo/problemInfo_queryAllproblemInfo.action>题目列表</a>
+							<a href="addProblem.jsp">题目试题</a>
 						</div>
 					</li>
 					<li>

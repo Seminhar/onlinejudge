@@ -9,9 +9,9 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title>注册</title>
-    <link rel="stylesheet" href="css/common/register.css"/>
-    <script type="text/javascript" src="js/register/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript" src="js/register/regform.js"></script>
+    <link rel="stylesheet" href="../css/common/register.css"/>
+    <script type="text/javascript" src="../js/register/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/register/regform.js"></script>
 </head>
 <body>
 <div>

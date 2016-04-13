@@ -22,10 +22,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/common/init.css">
-    <link rel="stylesheet" href="css/common/main.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="../css/common/init.css">
+    <link rel="stylesheet" href="../css/common/main.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
         body {
             padding-top: 50px;
@@ -112,8 +112,8 @@
     </footer>
 </div>
 <!-- /container -->
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
 </body>
 
 </html>

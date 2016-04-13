@@ -58,6 +58,10 @@ public class studentAction extends SuperAction implements ModelDriven<student> {
        if (list!=null&&list.size()>0){
            session.setAttribute("queryAllStudent_list",list);
        }
+       else
+       return "stu_queryAll_failure";
+
        return "stu_queryAll_success";
         }
+
 }

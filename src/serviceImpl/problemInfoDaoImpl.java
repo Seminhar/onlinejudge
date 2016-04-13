@@ -2,14 +2,15 @@ package serviceImpl;
 
 import db.MyHibernateSessionFactory;
 import entity.problemInfo;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import service.problemInfoDao;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
-import java.util.logging.SimpleFormatter;
 
 /**
  * Created by Administrator on 2016/4/9.
@@ -36,7 +37,7 @@ public class problemInfoDaoImpl implements problemInfoDao {
      */
     public static String getTimes(){
         Date date=new Date();
-        SimpleDateFormat dateF = new SimpleDateFormat("yyyy-MM-dd-HH-mmss");
+        SimpleDateFormat dateF = new SimpleDateFormat("yyyy-MM-dd-HH:mm");
         String timeF = dateF.format(date);
         return timeF;
     }
@@ -76,5 +77,28 @@ public class problemInfoDaoImpl implements problemInfoDao {
     @Override
     public boolean deleteProblemInfo(problemInfo pInfo) {
         return false;
+    }
+
+    @Override
+    public List<problemInfo> queryAllProblemInfo() {
+        Transaction tx = null;
+        String hql = "";
+        List<problemInfo> list = null;
+        try {
+            Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+            tx = session.beginTransaction();
+            hql = "from problemInfo ";
+            Query query = session.createQuery(hql);
+            list = query.list();
+            tx.commit();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+            tx.commit();
+            return list;
+        } finally {
+            if (tx != null)
+                tx = null;
+        }
     }
 }

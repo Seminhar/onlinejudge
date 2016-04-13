@@ -2,6 +2,8 @@ package service;
 
 import entity.problemInfo;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/4/9.
  */
@@ -15,4 +17,8 @@ public interface problemInfoDao {
     /**
      * 删除题目*/
     public boolean deleteProblemInfo(problemInfo pInfo);
+    /**
+     * 查询题目*/
+    public List<problemInfo> queryAllProblemInfo();
+
 }

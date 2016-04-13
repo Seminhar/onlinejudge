@@ -68,30 +68,30 @@
 <div id="mainContainer">
     <table class="table">
         <tr>
-            <th>学号</th>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>学院</th>
-            <th>邮箱</th>
+            <th>题号</th>
+            <th>题目</th>
+            <th>发布时间</th>
+            <th>作者</th>
+            <th>备注</th>
             <th>操作</th>
         </tr>
-        <s:iterator value="#session.queryAllStudent_list" var="stu">
-        <tr>
-            <td style="width:265px;">
-                <div class="cut_title ellipsis">
-                    <s:property value="#stu.studentNum"/>
-                </div>
-            </td>
-            <td><s:property value="#stu.studentName"/></td>
-            <td><s:property value="#stu.studentGender"/></td>
-            <td><s:property value="#stu.studentCollege"/></td>
-            <td><s:property value="#stu.studentEmail"/></td>
-            <td>
-                <a href="<%=path%>/students/Students_delete.action?sid=<s:property value="#stu.studentNum"/>"
-                   onclick="javascript: return confirm('真的要删除吗？');">删除
-                </a>
-            </td>
-        </tr>
+        <s:iterator value="#session.problemInfo_queryAll_success" var="pInfo">
+            <tr>
+                <td style="width:265px;">
+                    <div class="cut_title ellipsis">
+                        <s:property value="#pInfo.problemId"/>
+                    </div>
+                </td>
+                <td><s:property value="#pInfo.problemName"/></td>
+                <td><s:property value="#pInfo.AcceptTimes"/></td>
+                <td><s:property value="#pInfo.author"/></td>
+                <td><s:property value=""/></td>
+                <td>
+                    <a href="<%=path%>/problemInfo//problemInfo_delete.action?sid=<s:property value="#pInfo.problemId"/>"
+                       onclick="javascript: return confirm('真的要删除吗？');">删除
+                    </a>
+                </td>
+            </tr>
         </s:iterator>
     </table>
 

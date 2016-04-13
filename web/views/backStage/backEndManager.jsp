@@ -17,7 +17,7 @@
 <head>
     <meta charset="utf-8">
     <title>OnLinJudge后台管理系统</title>
-    <link rel="stylesheet" href="css/backStage/backStage.css">
+    <link rel="stylesheet" href="../../css/backStage/backStage.css">
 </head>
 <body>
 <div class="head">

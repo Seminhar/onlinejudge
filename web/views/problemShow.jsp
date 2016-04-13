@@ -22,7 +22,7 @@
     <title>
         GZS送温暖
     </title>
-    <link rel="stylesheet" type="text/css" href="css/problem/problemShow.css">
+    <link rel="stylesheet" type="text/css" href="../css/problem/problemShow.css">
 </head>
 
 <body>

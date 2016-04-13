@@ -5,6 +5,8 @@ import entity.problemInfo;
 import service.problemInfoDao;
 import serviceImpl.problemInfoDaoImpl;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/4/9.
  */
@@ -26,5 +28,16 @@ public class problemInfoAction extends SuperAction implements ModelDriven<proble
         else {
             return "addProblemInfo_failure";
         }
+    }
+
+    public String queryAllproblemInfo(){
+      problemInfoDao problemInfoDao = new problemInfoDaoImpl();
+        List<problemInfo> list = problemInfoDao.queryAllProblemInfo();
+        if(list.size()>0&&list!=null) {
+            session.setAttribute("problemInfo_queryAll_success", list);
+        }
+        else
+        return "problemInfo_queryAll_failure";
+        return "problemInfo_queryAll_success";
     }
 }
