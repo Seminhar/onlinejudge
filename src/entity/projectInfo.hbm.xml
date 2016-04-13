@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.projectInfo" table="projectInfo">
+        <id name="projectInfoId" type="java.lang.String" length="16">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="projectInfoName" type="java.lang.String"/>
+        <property name="projectInfoContent" type="java.lang.String"/>
+        <property name="projectInfoStatus" type="java.lang.Integer"/>
+        <property name="projectInfoStartTime" type="java.util.Date"/>
+        <property name="projectInfoEndTime" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

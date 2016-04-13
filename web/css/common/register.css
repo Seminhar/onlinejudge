@@ -1,0 +1,62 @@
+
+/* form-div */
+.form-div{
+    background-color:rgba(255,255,255,0.27);
+    border-radius:10px;
+    width:540px;
+    height: 400px;
+    margin:130px auto;
+    padding:30px 0px 20px 0px;
+    font-size:10px;
+    box-shadow:inset 0px 0px 10px rgba(255,255,255,0.5),0px 0px 15px rgba(75,75,75,0.3);
+    text-align:center;
+    font-size: 16px;
+
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 270px;
+    height: -webkit-calc(3em + 2px);
+    height: calc(3em + 2px);
+    margin: 1em 0 1em;
+    padding: 10px;
+    border: 2px solid #cccccc;
+    border-radius: 1.5em;
+    background: #fff;
+    line-height:20px;
+    font-size:16px;
+
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border:2px solid #50afeb;
+    outline:none;
+}
+input[type="button"],
+input[type="submit"] {
+    padding:7px 15px;
+    background-color:#5a88c8;
+    text-align:center;
+    border-radius:5px;
+    overflow:hidden;
+    width:80px;
+    height: 45px;
+    border:none;
+    color:#FFF;
+    margin-right:45px;
+    margin-top:20px;
+    box-shadow:1px 1px 1px rgba(75,75,75,0.3);
+}
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color:#5cb85c;
+}
+input[type="button"]:active,
+input[type="submit"]:active {
+    background-color:#5cb85c;
+}

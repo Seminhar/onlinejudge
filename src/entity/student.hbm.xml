@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.student" table="studentInfo">
+        <id name="studentNum" type="java.lang.String" length="16">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="studentName" type="java.lang.String"/>
+        <property name="studentPassword" type="java.lang.String"/>
+        <property name="studentEmail" type="java.lang.String"/>
+        <property name="studentCollege" type="java.lang.String"/>
+        <property name="studentGender" type="java.lang.String"/>
+
+    </class>
+</hibernate-mapping>

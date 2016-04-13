@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.submitInfo" table="submitInfo">
+        <id name="compileId" type="java.lang.String" length="16">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="userId" type="java.lang.String"/>
+        <property name="projectInfoId" type="java.lang.String"/>
+        <property name="problemId" type="java.lang.String"/>
+        <property name="compLang" type="java.lang.String"/>
+        <property name="submitTime" type="java.util.Date"/>
+        <property name="submitResult" type="java.lang.Integer"/>
+        <property name="compileInfo" type="java.lang.String"/>
+        <property name="sourceCode" type="java.lang.String"/>
+        <property name="CodeLength" type="java.lang.String"/>
+        <property name="usedTime" type="java.lang.String"/>
+        <property name="usedMemory" type="java.lang.String"/>
+
+    </class>
+</hibernate-mapping>

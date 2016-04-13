@@ -1,0 +1,100 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	height: 100%;
+	font-family: "Microsoft YaHei";
+	font-size: .28em;
+	line-height: 1;
+	color: #333;
+	background-color: white;
+}
+
+input,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+	-webkit-appearance: button;
+	cursor: pointer
+}
+
+input {
+	outline: none;
+}
+
+html {
+	font-size: 50px;
+	-webkit-tap-highlight-color: transparent;
+	height: 100%;
+	min-width: 320px;
+	overflow-x: hidden
+}
+button,
+input,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+
+hr {
+	margin-top: .28rem;
+	margin-bottom: .28rem;
+	border: 0;
+	border-top: 1px solid #DDD8CE
+}
+.textbox {
+	border: 1px #139667 solid;
+	height: 26px;
+	line-height: 26px;
+	padding: 5px;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.textbox_295 {
+	width: 295px;
+}
+
+.textbox_225 {
+	width: 225px;
+}
+
+.textarea {
+	display: inline-block;
+	margin-top: 5px;
+	outline: none;
+	resize: none;
+	border: 1px #139667 solid;
+	padding: 8px;
+}
+.ulColumn2 {
+	overflow: hidden;
+}
+
+.ulColumn2 li {
+	margin: 15px 0;
+}
+
+.ulColumn2 li .item_name {
+	text-align: right;
+	display: inline-block;
+}
+.footer{
+	height: 50px;
+	line-height: 50px;
+	background: #5e5e5e;
+	width: 100%;
+	text-align: center;
+}

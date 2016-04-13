@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.teacher" table="teacherInfo">
+        <id name="teacherId" type="java.lang.String" length="16">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="teacherNum" type="java.lang.String"/>
+        <property name="teacherName" type="java.lang.String"/>
+        <property name="teacherPassword" type="java.lang.String"/>
+        <property name="teacherEmail" type="java.lang.String"/>
+        <property name="teacherGender" type="java.lang.String"/>
+        <property name="teacherCollege" type="java.lang.String"/>
+
+    </class>
+</hibernate-mapping>

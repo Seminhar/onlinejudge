@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.problemInfo" table="problemInfo">
+        <id name="problemId" type="java.lang.String" length="16">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="problemName" type="java.lang.String"/>
+        <property name="problemContent" type="java.lang.String"/>
+        <property name="memeryLim" type="java.lang.String"/>
+        <property name="timesLim" type="java.lang.String"/>
+        <property name="AcceptTimes" type="java.lang.String"/>
+        <property name="inPut" type="java.lang.String"/>
+        <property name="outPut" type="java.lang.String"/>
+        <property name="exInput" type="java.lang.String"/>
+        <property name="exOutput" type="java.lang.String"/>
+        <property name="author" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>
