@@ -32,7 +32,11 @@
                         <s:property value="#pInfo.problemId"/>
                     </div>
                 </td>
-                <td><a href=<%=path%>/problemInfo/problemInfo_queryAllproblemList.action><s:property value="#pInfo.problemName"/></a></td>
+                <td>
+                    <a href=<%=path%>/problemInfo/problemInfo_problemShow.action?problemId=<s:property value="#pInfo.problemId"/>>
+                    <s:property value="#pInfo.problemName"/>
+                    </a>
+                </td>
                 <td><s:property value="#"/></td>
                 <td><s:property value="#"/></td>
                 <td><s:property value="#"/></td>

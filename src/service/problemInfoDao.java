@@ -18,10 +18,14 @@ public interface problemInfoDao {
      * 删除题目*/
     public boolean deleteProblemInfo(problemInfo pInfo);
     /**
-     * 查询题目*/
+     * 查询所有题目*/
     public List<problemInfo> queryAllProblemInfo();
     /**
      * 显示题目信息
      */
-    public List<problemInfo> showProblemInfo();
+    public List<problemInfo> showProblemInfo(String problemId);
+    /**
+     * 查询题目具体信息
+     */
+    public boolean queryProblemInfo();
 }

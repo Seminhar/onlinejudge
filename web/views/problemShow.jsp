@@ -6,14 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" import="org.apache.struts2.ServletActionContext" contentType="text/html; charset=utf-8" %>
+<%@ page import="org.hibernate.Session" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
     String path = request.getContextPath();
+   /* Session session1= (Session) session.getAttribute("showProblemInfo_success");*/
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <!DOCTYPE html>
 <html lang="zh-cn">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

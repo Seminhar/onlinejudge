@@ -3,7 +3,7 @@ package entity;
 /**
  * Created by Administrator on 2016/3/8.
  */
-  // 题目表
+// 题目表
 public class problemInfo {
     private String problemId;
     private String problemName;
@@ -19,6 +19,13 @@ public class problemInfo {
 
     public problemInfo() {
 
+    }
+
+    public problemInfo(String problemId, String problemName, String acceptTimes, String author) {
+        this.problemId = problemId;
+        this.problemName = problemName;
+        this.acceptTimes = acceptTimes;
+        this.author = author;
     }
 
     public problemInfo(String problemId, String problemName, String problemContent, String memeryLim, String timesLim, String acceptTimes, String inPut, String outPut, String exInput, String exOutput, String author) {
