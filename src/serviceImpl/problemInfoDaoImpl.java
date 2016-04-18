@@ -80,20 +80,20 @@ public class problemInfoDaoImpl implements problemInfoDao {
     }
 
     @Override
-    public List<problemInfo> queryAllProblemInfo() {
+    public List<problemInfo> queryProblemList() {
         Transaction tx = null;
         String hql = "";
         List<problemInfo> list = null;
         try {
             Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
-            hql = "select new problemInfo( problemId,problemName,AcceptTimes,author )from problemInfo ";
+            hql = "select new problemInfo( problemId,problemName,acceptTimes,author )from problemInfo ";
             /*hql = "from problemInfo ";*/
             Query query = session.createQuery(hql);
             list = query.list();
-          for (int i=0;i<list.size();i++){
+       /*   for (int i=0;i<list.size();i++){
               System.out.println("problemId"+list.get(0)+ "problemName"+list.get(1));
-          }
+          }*/
             tx.commit();
             return list;
         } catch (Exception e) {
@@ -114,9 +114,10 @@ public class problemInfoDaoImpl implements problemInfoDao {
         try {
             Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
-            hql = "from problemInfo where problemId='pId'";
-            System.out.println(hql);
+            hql = "from problemInfo where problemId=?";
             Query query = session.createQuery(hql);
+            query.setParameter(0,pId);
+            System.out.println(hql);
             list = query.list();
             tx.commit();
             return list;

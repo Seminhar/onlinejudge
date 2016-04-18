@@ -10,7 +10,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
     String path = request.getContextPath();
-   /* Session session1= (Session) session.getAttribute("showProblemInfo_success");*/
+    /*Session session1= (Session) session.getAttribute("showProblemInfo_success");*/
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <!DOCTYPE html>
@@ -21,7 +21,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <title>
-        <s:property value="${sessionScope.problemInfo.problenName}"></s:property>
         GZS送温暖
     </title>
     <link rel="stylesheet" type="text/css" href="../css/problem/problemShow.css">
@@ -29,8 +28,11 @@
 
 <body>
 <div class="container main">
-    <h2 class="text-center"> <s:property value="${sessionScope.problemInfo.problenName}"></s:property></h2>
+    <h2 class="text-center">
+        <% session.getAttribute("showProblemInfo_success");%>
 
+        <s:property value="#session.showProblemInfo_success.problemName"></s:property>
+    </h2>
     <p class="text-muted text-center">
         发布时间: 2015年9月6日 15:18&nbsp;&nbsp; 时间限制: 1000ms&nbsp;&nbsp; 内存限制: 256M
     </p>

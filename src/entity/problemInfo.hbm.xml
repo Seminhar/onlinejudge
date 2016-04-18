@@ -11,7 +11,7 @@
         <property name="problemContent" type="java.lang.String"/>
         <property name="memeryLim" type="java.lang.String"/>
         <property name="timesLim" type="java.lang.String"/>
-        <property name="AcceptTimes" type="java.lang.String"/>
+        <property name="acceptTimes" type="java.lang.String"/>
         <property name="inPut" type="java.lang.String"/>
         <property name="outPut" type="java.lang.String"/>
         <property name="exInput" type="java.lang.String"/>

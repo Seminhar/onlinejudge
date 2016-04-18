@@ -5,7 +5,6 @@ import entity.problemInfo;
 import service.problemInfoDao;
 import serviceImpl.problemInfoDaoImpl;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -30,36 +29,31 @@ public class problemInfoAction extends SuperAction implements ModelDriven<proble
         }
     }
 
-    public String queryAllproblemInfo() {
+    public String queryProblemList() {
         problemInfoDao problemInfoDao = new problemInfoDaoImpl();
-        List<problemInfo> list = problemInfoDao.queryAllProblemInfo();
-        if (list.size() > 0 && list != null) {
+        List<problemInfo> list = problemInfoDao.queryProblemList();
+        if (list != null&&list.size() > 0) {
+            /*request.setAttribute("problemInfo_queryAll_success",list);*/
+            session.setAttribute("problemInfo_queryAllList_success",list);
+        } else
+            return "problemInfo_queryAllList_failure";
+        return "problemInfo_queryAllList_success";
+
+    }
+
+    public String queryAllProblemInfo() throws Exception {
+        problemInfoDao problemInfoDao = new problemInfoDaoImpl();
+        List<problemInfo> list = problemInfoDao.queryProblemList();
+        if (list != null && list.size() > 0) {
             session.setAttribute("problemInfo_queryAll_success", list);
         } else
             return "problemInfo_queryAll_failure";
         return "problemInfo_queryAll_success";
     }
 
-    public String queryAllproblemList() throws Exception {
-        problemInfoDao problemInfoDao = new problemInfoDaoImpl();
-        List<problemInfo> list = problemInfoDao.queryAllProblemInfo();
-        if (list != null && list.size() > 0) {
-            session.setAttribute("problemInfo_queryAllList_success", list);
-        } else
-            return "problemInfo-queryAllList_failure";
-        return "problemInfo-queryAllList_success";
-    }
-
-    String problemId = null;
-
-    @Override
-    public void setServletRequest(HttpServletRequest request) {
-        problemId = request.getParameter("problemId");
-    }
-
     public String problemShow() {
         problemInfoDao problemInfoDao = new problemInfoDaoImpl();
-        List<problemInfo> list = problemInfoDao.showProblemInfo(problemId);
+        List<problemInfo> list = problemInfoDao.showProblemInfo(request.getParameter("problemId"));
         if (list != null && list.size() > 0) {
             session.setAttribute("showProblemInfo_success", list);
         } else

@@ -38,7 +38,7 @@
                 <td><s:property value="#pInfo.author"/></td>
                 <td><s:property value=""/></td>
                 <td>
-                    <a href="<%=path%>/problemInfo//problemInfo_delete.action?sid=<s:property value="#pInfo.problemId"/>"
+                    <a href="<%=path%>/problemInfo/problemInfo_delete.action?sid=<s:property value="#pInfo.problemId"/>"
                        onclick="javascript: return confirm('真的要删除吗？');">删除
                     </a>
                 </td>

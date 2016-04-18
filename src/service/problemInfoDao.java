@@ -19,7 +19,7 @@ public interface problemInfoDao {
     public boolean deleteProblemInfo(problemInfo pInfo);
     /**
      * 查询所有题目*/
-    public List<problemInfo> queryAllProblemInfo();
+    public List<problemInfo> queryProblemList();
     /**
      * 显示题目信息
      */

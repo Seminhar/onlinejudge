@@ -97,7 +97,7 @@
             <%--<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
         <div class="col-md-4">
-            <h2><a href=<%=path%>/problemInfo/problemInfo_queryAllproblemList.action>题目栅栏</a></h2>
+            <h2><a href=<%=path%>/problemInfo/problemInfo_queryProblemList.action>题目栅栏</a></h2>
            <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
         <div class="col-md-4">

@@ -1,8 +1,7 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
-
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 
     <session-factory>
@@ -16,7 +15,7 @@
         <property name="hibernate.connection.password"></property>
         <property name="hbm2ddl.auto">update</property>
         <property name="hibernate.current_session_context_class">thread</property>
-
+        <property name="maxIdleTime">20</property>
         <property name="hibernate.connection.pool.size">20</property>
         <property name="hibernate.show_sql">true</property>
         <!--jdbc.fetch_size是指Hibernate每次从数据库中取出并放到JDBC的Statement中的记录条数。F
@@ -30,8 +29,7 @@
         <property name="jdbc.use_scrollable_resultset">false</property>
         <!--connection.useUnicode连接数据库时是否使用Unicode编码-->
         <property name="connection.useUnicode">true</property>
-        <!--connection.characterEncoding连接数据库时数据的传输字符集编码方式，
-        最好设置为gbk，用gb2312有的字符不全-->
+        <!--connection.characterEncoding连接数据库时数据的传输字符集编码方式-->
         <property name="connection.characterEncoding">utf-8</property>
         <!--hibernate.dialect 只是Hibernate使用的数据库方言,就是要用Hibernate连接那种类型的数据库服务器。-->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>

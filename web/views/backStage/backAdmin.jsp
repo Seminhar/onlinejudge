@@ -56,8 +56,8 @@
 					<li>
 						<h4 class="M4"><span></span>题目管理</h4>
 						<div class="list-item none">
-							<a href=<%=path%>/problemInfo/problemInfo_queryAllproblemInfo.action>题目列表</a>
-							<a href="addProblem.jsp">题目试题</a>
+							<a href=<%=path%>/problemInfo/problemInfo_queryAllProblemInfo.action>题目列表</a>
+							<a href="addProblem.jsp">添加试题</a>
 						</div>
 					</li>
 					<li>
