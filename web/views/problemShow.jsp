@@ -6,15 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" import="entity.problemInfo" contentType="text/html; charset=utf-8" %>
-<%@ page import="org.hibernate.Session" %>
 <%@ page import="java.util.List" %>
-<%@ page import="static javax.swing.text.html.CSS.getAttribute" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
     String path = request.getContextPath();
     try {
         List<problemInfo> list = (List<problemInfo>) session.getAttribute("showProblemInfo_success");
-//        Session session1= (Session) session.getAttribute("showProblemInfo_success");
    /* String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";*/
 %>
 <!DOCTYPE html>
@@ -105,7 +102,7 @@
             <div id="code-field">
                 <label class="problem-label">提交代码</label>
                 <hr>
-                <textarea id="code-editor"></textarea>
+                <textarea class="code-editor" rows="20"></textarea>
             </div>
             <hr>
             <div id="submit-code">
