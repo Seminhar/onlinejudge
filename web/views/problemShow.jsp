@@ -74,8 +74,8 @@
 <%=list.get(0).getExOutput()%></pre>
         </div>
         <form action="<%=path%>/submitInfo/submitInfo_submitCode.action" method="post">
-            <div>
                 <input name="problemId" value=<%=list.get(0).getProblemId()%> hidden="hidden"></input>
+                <input name="userId" value=<%=session.getAttribute("stu_login_success_session")%> hidden="hidden"></input>
                 <label>选择语言</label>
                 <div>
                     <%--     <label class="radio-inline">

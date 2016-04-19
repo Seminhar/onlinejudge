@@ -25,6 +25,7 @@ public class submitInfoDaoImpl implements submitInfoDao {
             tx = session.beginTransaction();
             session.save(sif);
             System.out.println("提交的问题Id是： "+sif.getProblemId());
+            System.out.println("提交的用户是： "+ sif.getUserId());
             System.out.println(sif);
             tx.commit();
             return true;
