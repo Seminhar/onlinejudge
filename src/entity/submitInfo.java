@@ -1,18 +1,16 @@
 package entity;
 
-import java.util.Date;
-
 /**
  * Created by Administrator on 2016/3/8.
  */
 //存储用户提交的代码和编译结果及相关信息
 public class submitInfo {
-    private String compileId;
+    private String submitCodeId;
     private String userId;
     private String projectInfoId;
     private String problemId;
     private String compLang;           //编译语言
-    private Date submitTime;
+    private String  submitTime;
     private int submitResult;        //编译最终的结果  编译错误，答案正确/错误，内存/时间超出。。。。
     private String compileInfo;     //编译产生的有关信息-错误
     private String sourceCode;
@@ -27,7 +25,7 @@ public class submitInfo {
     @Override
     public String toString() {
         return "submitInfo{" +
-                "compileId='" + compileId + '\'' +
+                "compileId='" + submitCodeId + '\'' +
                 ", userName='" + userId + '\'' +
                 ", projectInfoId='" + projectInfoId + '\'' +
                 ", problemId='" + problemId + '\'' +
@@ -42,8 +40,8 @@ public class submitInfo {
                 '}';
     }
 
-    public submitInfo(String compileId, String userId, String projectInfoId, String problemId, String compLang, Date submitTime, int submitResult, String compileInfo, String sourceCode, String codeLength, String usedTime, String usedMemory) {
-        this.compileId = compileId;
+    public submitInfo(String submitCodeId, String userId, String projectInfoId, String problemId, String compLang, String  submitTime, int submitResult, String compileInfo, String sourceCode, String codeLength, String usedTime, String usedMemory) {
+        this.submitCodeId = submitCodeId;
         this.userId = userId;
         this.projectInfoId = projectInfoId;
         this.problemId = problemId;
@@ -57,12 +55,12 @@ public class submitInfo {
         this.usedMemory = usedMemory;
     }
 
-    public String getCompileId() {
-        return compileId;
+    public String getSubmitCodeId() {
+        return submitCodeId;
     }
 
-    public void setCompileId(String compileId) {
-        this.compileId = compileId;
+    public void setSubmitCodeId(String submitCodeId) {
+        this.submitCodeId = submitCodeId;
     }
 
     public String getUserId() {
@@ -97,11 +95,11 @@ public class submitInfo {
         this.compLang = compLang;
     }
 
-    public Date getSubmitTime() {
+    public String  getSubmitTime() {
         return submitTime;
     }
 
-    public void setSubmitTime(Date submitTime) {
+    public void setSubmitTime(String  submitTime) {
         this.submitTime = submitTime;
     }
 

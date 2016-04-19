@@ -31,7 +31,7 @@ public class studentAction extends SuperAction implements ModelDriven<student> {
         studentDao stuDao = new studentDaoImpl();
        /* System.out.print(getModel().getStudentNum());*/
         if (stuDao.studentLogin(stu)) {
-
+            session.setAttribute("stu_login_success_session",stu.getStudentNum());
             return "stu_login_success";
         } else {
             return "stu_login_failure";

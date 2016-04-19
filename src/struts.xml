@@ -34,4 +34,10 @@
             <result name="showProblemInfo_failure">/views/404.jsp</result>
         </action>
     </package>
+    <package name="submitInfo" namespace="/submitInfo" extends="default">
+        <action name="*_*" class="action.{1}Action" method="{2}">
+            <result name="submitCode_success" >/views/problemShow.jsp</result>
+            <result name="submitCode_failure">/views/404.jsp</result>
+        </action>
+    </package>
 </struts>

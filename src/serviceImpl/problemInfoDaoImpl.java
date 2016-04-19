@@ -18,6 +18,7 @@ import java.util.Random;
 public class problemInfoDaoImpl implements problemInfoDao {
     /**
      * 生成随机数字和字符的字符串
+     *
      * @return
      */
     public static String getRandomString() { //length表示生成字符串的长度
@@ -33,16 +34,19 @@ public class problemInfoDaoImpl implements problemInfoDao {
 
     /**
      * 生成时间格式
+     *
      * @return
      */
-    public static String getTimes(){
-        Date date=new Date();
+    public static String getTimes() {
+        Date date = new Date();
         SimpleDateFormat dateF = new SimpleDateFormat("yyyy-MM-dd-HH:mm");
         String timeF = dateF.format(date);
         return timeF;
     }
+
     /**
      * 添加题目信息
+     *
      * @param pInfo
      * @return
      */
@@ -53,7 +57,7 @@ public class problemInfoDaoImpl implements problemInfoDao {
             problemInfoDaoImpl pInfoDao = new problemInfoDaoImpl();
             pInfo.setProblemId(pInfoDao.getRandomString());
             pInfo.setAcceptTimes(pInfoDao.getTimes());
-            System.out.println("pInfoDao.getRandomString()"+pInfoDao.getRandomString());
+            System.out.println("pInfoDao.getRandomString()" + pInfoDao.getRandomString());
             Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
             session.save(pInfo);
@@ -116,7 +120,7 @@ public class problemInfoDaoImpl implements problemInfoDao {
             tx = session.beginTransaction();
             hql = "from problemInfo where problemId=?";
             Query query = session.createQuery(hql);
-            query.setParameter(0,pId);
+            query.setParameter(0, pId);
             System.out.println(hql);
             list = query.list();
             tx.commit();

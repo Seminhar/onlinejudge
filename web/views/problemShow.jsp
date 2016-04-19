@@ -73,13 +73,9 @@
 					<pre>
 <%=list.get(0).getExOutput()%></pre>
         </div>
-        <%
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        %>
-        <form>
+        <form action="<%=path%>/submitInfo/submitInfo_submitCode.action" method="post">
             <div>
+                <input name="problemId" value=<%=list.get(0).getProblemId()%> hidden="hidden"></input>
                 <label>选择语言</label>
                 <div>
                     <%--     <label class="radio-inline">
@@ -92,7 +88,7 @@
                              <input type="radio" name="language" value="3"> Java (Oracle JDK 1.7)
                          </label>--%>
                     语言选择：
-                    <select name="langType">
+                    <select name="compLang">
                         <option>java</option>
                         <option>C++</option>
                         <option>C</option>
@@ -102,7 +98,7 @@
             <div id="code-field">
                 <label class="problem-label">提交代码</label>
                 <hr>
-                <textarea class="code-editor" rows="20"></textarea>
+                <textarea class="code-editor" rows="20" name="sourceCode"></textarea>
             </div>
             <hr>
             <div id="submit-code">
@@ -112,6 +108,11 @@
                 <%-- <img src="/static/img/loading.gif" id="loading-gif">--%>
             </div>
         </form>
+        <%
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        %>
         <div id="result">
         </div>
         <hr>
@@ -121,6 +122,14 @@
 <div class="footer">
     <p class="text-muted text-center">Copyright © 2016 </p>
 </div>
+<script>
+    document.getElementById("submit-code-button").onclick=function () {
+        <%String stu_session=(String) session.getAttribute("stu_login_success_session");%>
+        if(stu_session.length() <= 0) {
+            alert("请登录后在进行相关操作！");
+        }
+    }
+</script>
 <!-- footer end -->
 </body>
 
