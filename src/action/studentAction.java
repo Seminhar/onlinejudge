@@ -31,13 +31,22 @@ public class studentAction extends SuperAction implements ModelDriven<student> {
         studentDao stuDao = new studentDaoImpl();
        /* System.out.print(getModel().getStudentNum());*/
         if (stuDao.studentLogin(stu)) {
-            session.setAttribute("stu_login_success_session",stu.getStudentNum());
+         session.setAttribute("stu_login_success_session",stu.getStudentName());
+            System.out.println("设置的session 是 "+stu.getStudentName());
+
             return "stu_login_success";
         } else {
             return "stu_login_failure";
         }
     }
-
+/**
+ * 学生登出
+ */
+    public String stuLogout(){
+        session.removeAttribute("stu_login_success_session");
+        session.invalidate();
+        return "stu_session_remove";
+    }
     /**
     学生注册
     */

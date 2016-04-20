@@ -51,8 +51,10 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">OnLineJudge</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" name="login_form"
+        <%try {String stuName =(String ) session.getAttribute("stu_login_success_session");%>
+        <%if(stuName==null||stuName.length()<0){ System.out.println(session.getAttribute("stu_login_success_session"));%>
+            <div id="navbar" class="navbar-collapse collapse" >
+            <form class="navbar-form navbar-right" name="login_form" id="login_form"
                   action="<%=path%>/student/student_stuLogin.action" method="post">
                 <div style="display:inline-block">
                     <input required='' type='text' name='studentName' id="studentName">
@@ -68,6 +70,17 @@
                 </button>
             </form>
         </div>
+    <%}else {%>
+        <div class="welcome navbar-right">
+           欢迎 <%=stuName%><br>
+            <a class="welcome  welcomeLogout" href="<%=path%>/student/student_stuLogout.action">退出</a>
+        </div>
+        <%}%>
+        <%
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        %>
         <!--/.navbar-collapse -->
     </div>
 </nav>
@@ -81,7 +94,7 @@
             <h2><em>跌宕着无穷与循环</em></h2>
             <h2><em>在递归中走出世界的尽头！</em></h2>
         </span>
-       <%-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>--%>
+        <%-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>--%>
     </div>
 </div>
 
@@ -98,14 +111,14 @@
         </div>
         <div class="col-md-4">
             <h2><a href=<%=path%>/problemInfo/problemInfo_queryProblemList.action>题目栅栏</a></h2>
-           <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
+            <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
         <div class="col-md-4">
             <h2>在线编译</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
                 porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
                 fermentum massa justo sit amet risus.</p>
-           <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
+            <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
     </div>
 </div>
