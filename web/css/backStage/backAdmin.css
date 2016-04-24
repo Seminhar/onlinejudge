@@ -66,42 +66,19 @@ body {
 
 /*****头部和尾部******/
 
-.top {
-	height: 5px;
-	line-height: 5px;
-	background: #f6f6f6;
-	width: 100%;
-	position: fixed;
-	z-index: 255;
-	top: 79px;
-	text-align: center;
-}
-
-.bottom {
-	height: 5px;
-	line-height: 5px;
-	background: #f6f6f6;
-	width: 100%;
-	position: fixed;
-	z-index: 255;
-	bottom: 50px;
-	text-align: center;
-}
-
 #header {
-	height: 80px;
+	height: 60px;
 	line-height: 80px;
 	background: #00a5a5;
 	width: 100%;
 	position: absolute;
 	z-index: 5;
-	top: 0;
 	text-align: center;
 }
 
 .logo {
-	line-height: 80px;
-	font-size: 30px;
+	line-height: 50px;
+	font-size: 25px;
 	color: #fff;
 	letter-spacing: 3px;
 	margin-left: 50px;
@@ -112,13 +89,14 @@ body {
 	float: right;
 	margin: 25px 50px 0 0;
 	color: #fff;
-	font-size: 14px;
+	font-size:14px;
 }
 
 .navigation ul li {
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
+	font-size: 16px;
 	float: left;
 	margin-left: 15px;
 }
@@ -129,6 +107,30 @@ body {
 
 .navigation ul li a:hover {
 	color: #32323a;
+}
+
+
+
+/*****主体部分******/
+
+#content {
+	background: #FC0;
+	width: 100%;
+	top: 65px;
+	position: absolute;
+	z-index: 10;
+	bottom: 50px;
+}
+/*底部*/
+.bottom {
+	height: 5px;
+	line-height: 5px;
+	background: #f6f6f6;
+	width: 100%;
+	position: fixed;
+	z-index: 255;
+	bottom: 50px;
+	text-align: center;
 }
 
 #footer {
@@ -148,24 +150,11 @@ body {
 	color: #fbfbfb;
 }
 
-
-/*****主体部分******/
-
-#content {
-	background: #FC0;
-	width: 100%;
-	top: 80px;
-	position: absolute;
-	z-index: 10;
-	bottom: 50px;
-}
-
-
 /**左侧菜单***/
 
 .left_menu {
 	float: left;
-	width: 300px;
+	width: 230px;
 	background: #32323a;
 	height: 100%;
 	position: absolute;
@@ -182,9 +171,9 @@ body {
 
 .left_menu ul li .list-item a {
 	width: 230px;
-	padding-left: 110px;
+	padding-left: 102px;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 15px;
 	color: #f5f5f5;
 	line-height: 30px;
 	display: block;
@@ -286,7 +275,7 @@ body {
 /***右侧内容****/
 
 .m-right {
-	margin-left: 300px;
+	margin-left: 230px;
 	height: 100%;
 }
 

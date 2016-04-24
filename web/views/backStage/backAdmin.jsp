@@ -11,12 +11,12 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>后台管理系统</title>
 		<link type="text/css" rel="stylesheet" href="../../css/backStage/backAdmin.css" />
+		<link type="text/css" rel="stylesheet" href="../../css/common/main.css"/>
 		<script type="text/javascript" src="../../js/backStage/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="../../js/backStage/menu.js"></script>
 	</head>
 
 	<body>
-		<div class="top"></div>
 		<div id="header">
 			<div class="logo">OnlineJudge后台管理系统</div>
 			<div class="navigation">
@@ -104,14 +104,15 @@
 					</ul>
 				</div>-->
 				<div class="main">
-                    <iframe src="../index.jsp" width="100%" height="100%">
+                    <iframe src="./home.jsp" width="100%" height="100%">
+
                     </iframe>
 				</div>
 			</div>
 		</div>
 		<div class="bottom"></div>
 		<div id="footer">
-			<p>Copyright© 2015 版权所有 </p>
+			<p>Copyright© Seminhar 2016版权所有 </p>
 		</div>
 		<script>
 			navList(12);

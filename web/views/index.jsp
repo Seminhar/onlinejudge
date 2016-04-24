@@ -71,10 +71,17 @@
             </form>
         </div>
     <%}else {%>
-        <div class="welcome navbar-right">
+        <div class="navigation">
+            <ul>
+                <li>欢迎您！</li>
+                <li><a href=""><%=stuName%></a></li>
+                <li><a href="<%=path%>/student/student_stuLogout.action">退出</a></li>
+            </ul>
+        </div>
+  <%--      <div class="welcome navbar-right">
            欢迎 <%=stuName%><br>
             <a class="welcome  welcomeLogout" href="<%=path%>/student/student_stuLogout.action">退出</a>
-        </div>
+        </div>--%>
         <%}%>
         <%
             } catch (Exception e) {
@@ -103,9 +110,7 @@
     <div class="row">
         <div class="col-md-4">
             <h2>在线竞赛</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui.
+            <p>
             </p>
             <%--<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
@@ -115,17 +120,15 @@
         </div>
         <div class="col-md-4">
             <h2>在线编译</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus.</p>
+            <p></p>
             <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
     </div>
 </div>
 <!-- /container -->
 <hr>
-<div class="footer" id="footer">
-    <p>&copy; Seminhar 2016</p>
+<div id="footer">
+    <p>Copyright© Seminhar 2016版权所有 </p>
 </div>
 <script src="../js/plugins.js"></script>
 <script src="../js/main.js"></script>

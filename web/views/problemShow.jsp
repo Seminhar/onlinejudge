@@ -94,15 +94,14 @@
                         <option>C</option>
                     </select>
                 </div>
-            </div>
             <div id="code-field">
                 <label class="problem-label">提交代码</label>
                 <hr>
-                <textarea class="code-editor" rows="20" name="sourceCode"></textarea>
+                <textarea class="code-editor" id="code-editor" rows="20" name="sourceCode"></textarea>
             </div>
             <hr>
             <div id="submit-code">
-                <button type="submit" class="btn btn-primary" id="submit-code-button">
+                <button type="submit" class="btn btn-primary" id="submit-code-button" onclick="onclick()">
                     提交代码
                 </button>
                 <%-- <img src="/static/img/loading.gif" id="loading-gif">--%>
@@ -124,9 +123,13 @@
 </div>
 <script>
     document.getElementById("submit-code-button").onclick=function () {
-        <%String stu_session=(String) session.getAttribute("stu_login_success_session");%>
-        if(stu_session.length() <= 0) {
-            alert("请登录后在进行相关操作！");
+        var stu_session =null;
+              stu_session=<%=session.getAttribute("stu_login_success_session")%>
+        if(stu_session==null||stu_session.length() <= 0) {
+            document.getElementById("submit-code-button").disabled=true;
+                    }
+        else{
+            document.getElementById("submit-code-button").disabled=false;
         }
     }
 </script>

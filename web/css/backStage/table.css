@@ -46,3 +46,6 @@ table {
 .table td .cut_title {
     width: 265px;
 }
+.list_problem_title{
+    text-align: center;
+}

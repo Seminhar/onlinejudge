@@ -20,7 +20,6 @@ public class submitInfoDaoImpl implements submitInfoDao {
             generateTimeFormat gtF = new generateTimeFormat();
             sif.setSubmitTime(gtF.getTimes());
             sif.setSubmitCodeId(gstr.getRandomString());
-
             Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
             session.save(sif);
