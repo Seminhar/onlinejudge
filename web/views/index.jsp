@@ -108,25 +108,25 @@
 <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-        <div class="col-md-4">
-            <h2>在线竞赛</h2>
+        <div class="col-md-4" id="col-md-1">
+            <h2><a href="#">在线竞赛</a></h2>
             <p>
             </p>
             <%--<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="col-md-2">
             <h2><a href=<%=path%>/problemInfo/problemInfo_queryProblemList.action>题目栅栏</a></h2>
             <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
-        <div class="col-md-4">
-            <h2>在线编译</h2>
+        <div class="col-md-4" id="col-md-3">
+            <h2><a href="#">在线编译</a></h2>
             <p></p>
             <%-- <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>--%>
         </div>
     </div>
 </div>
 <!-- /container -->
-<hr>
+
 <div id="footer">
     <p>Copyright© Seminhar 2016版权所有 </p>
 </div>

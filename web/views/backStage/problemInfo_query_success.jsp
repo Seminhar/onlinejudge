@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="../../css/backStage/table.css">
 <body>
 <div id="mainContainer">
+    <div class="list_problem_title">
+        <label><h1>题目列表</h1></label>
+    </div>
     <table class="table">
         <tr>
             <th>题号</th>

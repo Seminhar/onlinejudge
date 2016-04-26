@@ -110,7 +110,7 @@ input[type="password"][required] + label[placeholder]:before
 }
 
 .navigation ul li a:hover {
-    color: #32323a;
+    color:#FF9933;
 }
 
 #footer {
@@ -129,8 +129,40 @@ input[type="password"][required] + label[placeholder]:before
     line-height: 50px;
     color: #fbfbfb;
 }
+#col-md-1,#col-md-2,#col-md-3{
+    text-align: center;
+    background-color:#FF9933;
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+}
+#col-md-1 a,#col-md-2 a,#col-md-3 a{
+    text-decoration: none;
+    color: #0f0f0f;
+}
+#col-md-1:hover,#col-md-2:hover,#col-md-3:hover{
+    background-color: #4cae4c;
+}
 
+#col-md-1 a:active,#col-md-2 a:active,#col-md-3 a:active{
+    color: #0f0f0f;
+}
+#col-md-1 a:hover,#col-md-2 a:hover,#col-md-3 a:hover{
+    color: #fff;
+}
+#col-md-1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#col-md-2{
+    margin:30px 400px 30px;
 
+}
+#col-md-3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    float: right;
+}
 
 
 

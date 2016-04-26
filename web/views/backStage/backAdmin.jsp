@@ -23,7 +23,6 @@
 				<ul>
 					<li>欢迎您！</li>
 					<li><a href="">张三</a></li>
-					<li><a href="">修改密码</a></li>
 					<li><a href="">设置</a></li>
 					<li><a href="">退出</a></li>
 				</ul>
@@ -104,7 +103,7 @@
 					</ul>
 				</div>-->
 				<div class="main">
-                    <iframe src="./home.jsp" width="100%" height="100%">
+                    <iframe src="/views/backStage/home.jsp" width="100%" height="100%">
 
                     </iframe>
 				</div>
